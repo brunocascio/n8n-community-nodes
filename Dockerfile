@@ -4,8 +4,8 @@ LABEL org.opencontainers.image.source="https://github.com/brunocascio/n8n-commun
 LABEL org.opencontainers.image.description="Custom n8n Docker image with additional nodes"
 LABEL org.opencontainers.image.licenses="MIT"
 
-COPY nodes /home/node/.n8n/nodes
+COPY --chown=node:node ./nodes /home/node/.n8n/nodes
 
-RUN find /home/node/.n8n/nodes -exec npm ci {} \;
+RUN ls -d /home/node/.n8n/nodes/* | xargs -I {} sh -c 'cd {} && npm install --production'
 
 ENV N8N_CUSTOM_EXTENSIONS=/home/node/.n8n/nodes
