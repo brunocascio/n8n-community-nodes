@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@devlikeapro/n8n-nodes-waha": "^2024.9.5"
+  }
+}
