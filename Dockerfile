@@ -9,3 +9,4 @@ COPY --chown=node:node ./nodes /home/node/.n8n/nodes
 RUN ls -d /home/node/.n8n/nodes/* | xargs -I {} sh -c 'cd {} && npm install --production'
 
 ENV N8N_CUSTOM_EXTENSIONS=/home/node/.n8n/nodes
+ENV N8N_COMMUNITY_PACKAGES_ALLOW_TOOL_USAGE=true
