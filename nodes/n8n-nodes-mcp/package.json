@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "n8n-nodes-mcp": "^0.1.14"
+    "n8n-nodes-mcp": "^0.1.19"
   }
 }
