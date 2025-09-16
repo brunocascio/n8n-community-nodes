@@ -1,4 +1,4 @@
-FROM n8nio/n8n:1.109.2
+FROM n8nio/n8n:1.111.0
 
 LABEL org.opencontainers.image.source="https://github.com/brunocascio/n8n-community-nodes"
 LABEL org.opencontainers.image.description="Custom n8n Docker image with additional nodes"
